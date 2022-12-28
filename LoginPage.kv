@@ -1,0 +1,57 @@
+<LoginComponent>:
+    email:email
+    password:password
+    BoxLayout: 
+        orientation: 'vertical'
+        Label:
+            text:'Login'
+            font_size: 80
+        GridLayout:
+            cols: 2
+            
+            spacing: '10dp'
+            Label:
+                text:'Username'
+            
+            TextInput:
+                id: email
+                text:''
+
+            Label:
+                text:'Password'
+
+            TextInput:
+                id: password
+                text:''
+                password: True
+
+        Label:
+            id: status
+            text:'Type username and password'
+            font_size:50
+            color: (0,1,0,1)
+        GridLayout:
+            cols: 1
+            padding: (root.width / 4, 0, 0, 0)
+            Button:
+            
+                text:'Submit'
+                size_hint_x: None
+                size_hint_y: None
+                height: 150
+                width: root.width / 2
+                on_press: root.is_valid_login()
+
+            
+
+
+<MainPage>:
+    BoxLayout:
+        orientation: 'vertical'
+        Label:
+            text:'MainPage'
+        Button:
+            text: 'Exit'
+            on_press: root.exit()
+
+        
