@@ -1,0 +1,19 @@
+<TicTacToeScreen>:
+    orientation: 'vertical'
+    Button:
+        size_hint_y: None
+        height: 100
+        text:'Create GameTable.'
+        on_press: root.create_table()
+    Button:
+        size_hint_y: None
+        height: 100
+        text:'Clear'
+        on_press: root.clear()
+    GridLayout:
+        id: gameTable
+        cols: 3
+
+<BoxButton>:
+    font_size: 20
+    on_press:  root.show()
